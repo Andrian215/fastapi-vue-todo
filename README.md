@@ -17,7 +17,7 @@ This is **Day 1** of development: frontend skeleton initialized.
 ## Project Status
 
 - [x] Frontend skeleton created (Vue 3 + TypeScript)
-- [ ] Backend skeleton + MySQL connection
+- [x] Backend skeleton + MySQL connection
 - [ ] CRUD API for tasks
 - [ ] Authentication
 - [ ] Tests
