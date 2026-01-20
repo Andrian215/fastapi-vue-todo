@@ -9,7 +9,7 @@ This is **Day 1** of development: frontend skeleton initialized.
 
 - **Backend:** FastAPI, SQLAlchemy / SQLModel (planned)
 - **Frontend:** Vue 3, TypeScript, Vite, Pinia
-- **Database:** SQLite (development)
+- **Database:** MySQL (development & production)
 - **Authentication:** JWT (planned)
 
 ---
@@ -17,7 +17,7 @@ This is **Day 1** of development: frontend skeleton initialized.
 ## Project Status
 
 - [x] Frontend skeleton created (Vue 3 + TypeScript)
-- [ ] Backend skeleton to be added
+- [ ] Backend skeleton + MySQL connection
 - [ ] CRUD API for tasks
 - [ ] Authentication
 - [ ] Tests
