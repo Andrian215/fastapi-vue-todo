@@ -18,7 +18,7 @@ This is **Day 1** of development: frontend skeleton initialized.
 
 - [x] Frontend skeleton created (Vue 3 + TypeScript)
 - [x] Backend skeleton + MySQL connection
-- [ ] CRUD API for tasks
+- [x] CRUD API for tasks
 - [ ] Authentication
 - [ ] Tests
 
