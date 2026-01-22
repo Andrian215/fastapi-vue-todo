@@ -1,8 +1,6 @@
 # FastAPI + Vue 3 To-Do List
 
 A fullstack To-Do List project built with **FastAPI** (Python) for the backend and **Vue 3 + TypeScript** for the frontend.  
-This is **Day 1** of development: frontend skeleton initialized.
-
 ---
 
 ## Tech Stack
