@@ -3,6 +3,11 @@ from pydantic import BaseModel
 class TaskCreate(BaseModel):
     title: str
 
-class Task(TaskCreate):
+class TaskUpdate(BaseModel):
+    title: str | None = None
+    completed: bool | None = None
+
+class TaskOut(BaseModel):
     id: int
+    title: str
     completed: bool
