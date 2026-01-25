@@ -17,7 +17,7 @@ A fullstack To-Do List project built with **FastAPI** (Python) for the backend a
 - [x] Frontend skeleton created (Vue 3 + TypeScript)
 - [x] Backend skeleton + MySQL connection
 - [x] CRUD API for tasks
-- [ ] Authentication
+- [x] Authentication
 - [ ] Tests
 
 ---
