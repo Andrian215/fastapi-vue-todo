@@ -1,21 +1,28 @@
-from fastapi import APIRouter, HTTPException
+from fastapi import APIRouter, HTTPException, Depends
 from sqlalchemy import insert, select, update, delete
 from ..db import engine
 from ..models import tasks
-from ..schemas import TaskCreate, TaskUpdate
+from ..schemas import TaskCreate, TaskUpdate, TaskOut
+from ..deps import get_current_user_id
 
 router = APIRouter(prefix="/tasks", tags=["tasks"])
 
-@router.post("/", status_code=201)
-def create_task(data: TaskCreate):
+@router.post("/", response_model=TaskOut)
+def create_task(data: TaskCreate, user_id: int = Depends(get_current_user_id)):
     with engine.begin() as conn:
-        res = conn.execute(insert(tasks).values(title=data.title))
-        return {"id": res.lastrowid, "title": data.title, "completed": False}
+        result = conn.execute(
+            insert(tasks).values(title=data.title, completed=False, owner_id=user_id)
+        )
+        task_id = result.lastrowid
+    return {"id": task_id, "title": data.title, "completed": False}
 
-@router.get("/")
-def list_tasks():
+@router.get("/", response_model=list[TaskOut])
+def list_tasks(user_id: int = Depends(get_current_user_id)):
     with engine.connect() as conn:
-        return conn.execute(select(tasks)).mappings().all()
+        rows = conn.execute(
+            select(tasks).where(tasks.c.owner_id == user_id)
+        ).mappings().all()
+    return list(rows)
 
 @router.get("/{task_id}")
 def get_task(task_id: int):
