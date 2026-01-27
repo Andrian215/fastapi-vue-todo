@@ -5,10 +5,10 @@ A fullstack To-Do List project built with **FastAPI** (Python) for the backend a
 
 ## Tech Stack
 
-- **Backend:** FastAPI, SQLAlchemy / SQLModel (planned)
+- **Backend:** FastAPI, SQLAlchemy
 - **Frontend:** Vue 3, TypeScript, Vite, Pinia
-- **Database:** MySQL (development & production)
-- **Authentication:** JWT (planned)
+- **Database:** MySQL 
+- **Authentication:** JWT
 
 ---
 
@@ -17,19 +17,29 @@ A fullstack To-Do List project built with **FastAPI** (Python) for the backend a
 - [x] Frontend skeleton created (Vue 3 + TypeScript)
 - [x] Backend skeleton + MySQL connection
 - [x] CRUD API for tasks
-- [x] Authentication
-- [ ] Tests
+- [x] Authentication (JWT)
+- [x] Tests (pytest)
 
 ---
 
 ## Getting Started (Frontend)
 
 1. Go to frontend folder:
+   ```bash
    cd frontend
-2. Install dependencies:
+3. Install dependencies:
+4. ```bash
    npm install
-3. Start dev server:
+5. Start dev server:
+6. ```bash
    npm run dev
-4. Open in your browser:
+7. Open in your browser:
    http://localhost:5173
 
+## Testing (Backend)
+1. Go to backend folder:
+2. ```bash
+   cd backend
+   ```bash
+3. Run tests:
+   python -m pytest
