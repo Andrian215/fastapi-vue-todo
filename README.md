@@ -40,6 +40,6 @@ A fullstack To-Do List project built with **FastAPI** (Python) for the backend a
 1. Go to backend folder:
 2. ```bash
    cd backend
-   ```bash
 3. Run tests:
+4. ```bash
    python -m pytest
